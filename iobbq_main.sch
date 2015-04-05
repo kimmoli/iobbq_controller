@@ -7531,6 +7531,8 @@ Texas Instruments and Fairchild Semiconductor, ect.&lt;br&gt;
 <part name="+3V30" library="EKE" deviceset="+3V3" device=""/>
 <part name="X16" library="OMAT_IC" deviceset="TE_RUUVILIITIN3" device="" value="TE 282837-3"/>
 <part name="U$3" library="dafug" deviceset="DAFUG" device=""/>
+<part name="R29" library="OMAT_IC" deviceset="RES" device="0603" value="3k24"/>
+<part name="GND34" library="EKE" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7754,6 +7756,8 @@ KIMMOLI 2015</text>
 <instance part="+3V30" gate="G$1" x="325.12" y="411.48"/>
 <instance part="X16" gate="G$1" x="-27.94" y="474.98"/>
 <instance part="U$3" gate="G$1" x="25.4" y="66.04"/>
+<instance part="R29" gate="G$1" x="121.92" y="195.58" rot="R90"/>
+<instance part="GND34" gate="1" x="121.92" y="187.96"/>
 </instances>
 <busses>
 </busses>
@@ -8078,6 +8082,10 @@ KIMMOLI 2015</text>
 <wire x1="-7.62" y1="474.98" x2="-2.54" y2="474.98" width="0.1524" layer="91"/>
 <junction x="-7.62" y="474.98"/>
 <pinref part="X16" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="R29" gate="G$1" pin="1"/>
+<pinref part="GND34" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -9476,6 +9484,14 @@ KIMMOLI 2015</text>
 <wire x1="127" y1="208.28" x2="127" y2="205.74" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="GPIO2"/>
 <wire x1="127" y1="205.74" x2="106.68" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="200.66" x2="121.92" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="GPIO15"/>
+<wire x1="121.92" y1="203.2" x2="106.68" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
